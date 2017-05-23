@@ -12,7 +12,7 @@ CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \
 		-gencode arch=compute_30,code=sm_30 \
 		-gencode arch=compute_35,code=sm_35 \
 		-gencode=arch=compute_50,code=sm_50 \
-		#-gencode=arch=compute_50,code=compute_50
+		-gencode=arch=compute_50,code=compute_50
 
 # Uncomment if your OpenCV version >= 3.0
 # OPENCV_VERSION := 3
@@ -30,7 +30,7 @@ BLAS := atlas
 
 # This is required only if you will compile the matlab interface.
 # MATLAB directory should contain the mex binary in /bin.
-# MATLAB_DIR := /usr/local
+  MATLAB_DIR := /usr/local/MATLAB/R2015b
 # MATLAB_DIR := /Applications/MATLAB_R2012b.app
 
 # NOTE: this is required only if you will compile the python interface.
