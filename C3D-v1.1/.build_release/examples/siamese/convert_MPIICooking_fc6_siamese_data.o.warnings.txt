@@ -1,0 +1,13 @@
+examples/siamese/convert_MPIICooking_fc6_siamese_data.cpp: In function ‘void convert_dataset(const char*, const char*, const char*)’:
+examples/siamese/convert_MPIICooking_fc6_siamese_data.cpp:66:37: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   std::system(command.str().c_str());
+                                     ^
+examples/siamese/convert_MPIICooking_fc6_siamese_data.cpp:72:32: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+   std::system("rm -f temp.txt");
+                                ^
+examples/siamese/convert_MPIICooking_fc6_siamese_data.cpp:101:39: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     std::system(command.str().c_str());
+                                       ^
+examples/siamese/convert_MPIICooking_fc6_siamese_data.cpp:108:34: warning: ignoring return value of ‘int system(const char*)’, declared with attribute warn_unused_result [-Wunused-result]
+     std::system("rm -f temp.txt");    
+                                  ^

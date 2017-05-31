@@ -28,29 +28,30 @@ for ii in range(0, n_frames,S):
     text_file.write(filename+' '+str(ii)+' '+ str(0) + '\n')
 text_file.close()
 
+# check the output folder
+outfolder='/home/yzhang/workspace/ActivitySegmentation/Data_MPIICooking/' + sys.argv[2]
+if not os.path.isdir(outfolder):
+    os.makedirs(outfolder)
+else:
+    print 'Notice: the filder ' + sys.argv[2] + ' already exists.\n'
+
 # write the output file
 text_file = open('MPIICooking_' + sys.argv[2] + '_output_list_video.txt', 'w')
 
-prefix ='output/'+ sys.argv[2] + '/' 
+prefix = outfolder + '/' 
 
 
 for ii in range(0, n_frames,S):
     text_file.write(prefix+'%06d\n'%ii)
 text_file.close()
 
-# check the necessary directories
-outfolder='../output/' + sys.argv[2]
-if not os.path.isdir(outfolder):
-    os.makedirs(outfolder)
+
+# check whether the model is existing
+if not os.path.isfile('../conv3d_deepnetA_sport1m_iter_1900000'):
+    proc = subprocess.Popen(['wget http://vlg.cs.dartmouth.edu/c3d/conv3d_deepnetA_sport1m_iter_1900000 -O ../conv3d_deepnetA_sport1m_iter_1900000'], shell=True,stdout=subprocess.PIPE)
 else:
-    print('Notice: the filder ' + sys.argv[2] + ' already exists.\n')
+    print 'Notice: the model ../conv3d_deepnetA_sport1m_iter_1900000 exists. \n'
+proc.stdout.close()
 
-
-
-
-
-
-
-
-
+    
 
